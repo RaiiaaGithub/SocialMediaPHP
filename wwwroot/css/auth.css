@@ -1,0 +1,159 @@
+:root {
+    font-family: 'Nunito', sans-serif;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;   
+}
+
+.auth {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #FF5A00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #FFDB00FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FF7000FF 0%, #FF0000FF 100%);
+}
+
+button, button::after {
+    transition: all 100ms ease-in-out;
+    transform: scale(1);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+.form-auth {
+    background-color: white;
+    border-radius: .5rem;
+    padding: 2rem;
+    margin-inline: 2rem;
+    min-height: 80vh;
+    width: min(400px, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.form-title {
+    margin-block: 1rem;
+    text-align: center;
+}
+
+.form-title > * {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.form-controls {
+    display: flex;
+    flex-direction: column;
+    margin-block: .5rem;
+}
+
+.form-controls label {
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.form-controls input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    padding-block: .2em;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    transition: border-bottom 150ms ease-in-out;
+}
+
+.form-controls input:focus {
+    border-bottom: 2px solid #FF7000FF;
+}
+
+.form-controls input::placeholder {
+    color: gray;    
+}
+
+.form-actions {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.form-actions button {
+    width: 100%;
+    padding-block: .5em;
+
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+
+    background-color: transparent;
+
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+
+    position: relative;
+}
+
+.form-actions button::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(30deg, #FF0000FF 0%, #FF7000FF 50%);
+    inset: 0;
+    border-radius: 10rem;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.form-actions button::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    inset: 3px;
+    border-radius: 10rem;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-actions button:hover {
+    color: #FF7000FF;
+    font-weight: 700;
+}
+
+.form-actions button:hover::after {
+    opacity: 1;
+}
+
+.auth-action {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.auth-action h3 {
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.auth-action a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
